@@ -17,6 +17,6 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HG }}
         run: |
-          git remote add space https://marioashraf98:$HG@huggingface.co/spaces/marioashraf98/mlops-pipeline
+          git remote add space https://marioashraf98:$HF_TOKEN@huggingface.co/spaces/marioashraf98/mlops-pipeline
           git push --force space main
       
