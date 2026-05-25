@@ -9,7 +9,7 @@ def predict(prompt):
     return f"{result['label']}: {result['score']:.4f}"
 
 with gr.Blocks() as demo:
-    textbox = gr.TextBox(placeholder="Enter text block to summarize", lines=4)
+    textbox = gr.Textbox(placeholder="Enter text block to summarize", lines=4)
     gr.Interface(fn=predict, inputs=textbox, outputs="text")
 
 demo.launch()
